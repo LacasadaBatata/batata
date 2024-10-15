@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+    margin-bottom: -80px;
+}
+
+.logo img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 40px;
+    margin-top: -25px;
+}
+
+/* Estilo do contêiner de cards */
+.cards-container {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin: 20px; /* Margem em volta do contêiner */
+}
+
+/* Estilo de cada card */
+.card {
+    background-color: #323232; /* Cor de fundo dos cards */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 300px; /* Largura fixa dos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center; /* Centraliza o texto */
+}
+
+.card h4 {
+    color: yellow;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 15px;
+}
+
+.card p {
+    font-size: large;
+}
+
+button {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+/* Estilo do modal */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Adiciona barra de rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #323232;
+    margin: 15% auto; /* Margem automática para centralizar */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Largura do modal */
+    max-width: 400px; /* Largura máxima do modal */
+}
+
+/* Estilo do botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
