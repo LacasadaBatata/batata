@@ -28,13 +28,13 @@ function updateExtrasPrices(secondCard) {
             } else {
                 // Se for o primeiro card, mantém os valores originais
                 switch (checkbox.value) {
-                    case "Cheddar + (2,00)":
+                    case "Cheddar ":
                         label.innerHTML = `${checkbox.outerHTML} Cheddar ------------------------- R$ 2,00`;
                         break;
-                    case "Catupiry + (2,00)":
+                    case "Catupiry ":
                         label.innerHTML = `${checkbox.outerHTML} Catupiry ------------------------- R$ 2,00`;
                         break;
-                    case "Quatro Queijos + (4,00)":
+                    case "Quatro Queijos ":
                         label.innerHTML = `${checkbox.outerHTML} Quatro Queijos ---------------- R$ 4,00`;
                         break;
                     default:
