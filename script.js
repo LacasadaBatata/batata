@@ -34,8 +34,8 @@ function updateExtrasPrices(secondCard) {
                     case "Catupiry ":
                         label.innerHTML = `${checkbox.outerHTML} Catupiry ------------------------- R$ 2,00`;
                         break;
-                    case "Quatro Queijos ":
-                        label.innerHTML = `${checkbox.outerHTML} Quatro Queijos ---------------- R$ 4,00`;
+                    case "Molho 4 Queijos ":
+                        label.innerHTML = `${checkbox.outerHTML} Molho 4 Queijos ---------------- R$ 4,00`;
                         break;
                     default:
                         label.innerHTML = `${checkbox.outerHTML} ${checkbox.value} --------------- Grátis`;
