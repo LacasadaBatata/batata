@@ -9,23 +9,23 @@
 <body>
     
     <div class="logo">
-    <img src="logopng.png" alt="">
+        <img src="logopng.png" alt="">
     </div>
     <main>
         <div class="cards-container">
             <div class="card">
-                <img src="porçãodebatata.png" alt="" srcset="">
+                <img src="porçãodebatata.png" alt="">
                 <h2>Batata Tradicional</h2>
                 <p>Selecione o sabor no botão pedir!</p>
                 <h4>R$ 8,00</h4>
                 <button onclick="openExtrasModal('Batata Simples', 8)">Pedir</button>
             </div>
             <div class="card">
-                <img src="porçãodebatata.png" alt="" srcset="">
-                <h2>Barca de Batata</h2>
+                <img src="porçãodebatata.png" alt="">
+                <h2>Batata Frita</h2>
                 <p>1kg de batata, Cheddar e Catupiry ou Molho 4 queijos.</p>
                 <h4>R$ 30,00</h4>
-                <button onclick="openExtrasModal('Batata Especial', 30)">Pedir</button>
+                <button onclick="openExtrasModal('Batata Especial', 30, true)">Pedir</button>
             </div>
         </div>
 
@@ -36,22 +36,26 @@
                 <h2>Escolha seus Adicionais</h2>
                 <form id="extras-form">
                     <label><input type="checkbox" name="adicional" value="Ketchup"> Ketchup ------------------------- Grátis</label><br>
+
                     <label><input type="checkbox" name="adicional" value="Maionese"> Maionese  ----------------------- Grátis</label><br>
+
                     <label><input type="checkbox" name="adicional" value="Queijo Ralado"> Queijo Ralado  ----------------- Grátis</label><br>
-                    <label><input type="checkbox" name="adicional" value="Cheddar + (2,00)"> Cheddar ------------------------- R$ 2,00</label><br>
-                    <label><input type="checkbox" name="adicional" value="Catupiry + (2,00)"> Catupiry  ------------------------- R$ 2,00</label><br>
+
                     <label><input type="checkbox" name="adicional" value="Orégano"> Orégano  ------------------------ Grátis</label><br>
-                    <label><input type="checkbox" name="adicional" value="Quatro Queijos + (4,00)"> Quatro Queijos  ---------------- R$ 4,00</label><br>
+
+                    <label><input type="checkbox" name="adicional" value="Cheddar + (2,00)"> Cheddar ------------------------- R$ 2,00</label><br>
+
+                    <label><input type="checkbox" name="adicional" value="Catupiry + (2,00)"> Catupiry  ------------------------- R$ 2,00</label><br>
                     
-                    <h4>Total: R$ <span>8,00</span></h4>
-                    <p style="color: red; font-size: 15px; margin-top: -15px;">OBS: Batata Frita adicional é grátis! Cada sabor custa R$ 2,00 a mais.</p>
-                    <p style="color: red; font-size: 15px; margin-top: -10px;">OBS: Batata Tradicional selecione Apenas os adicionais grátis.</p>
-                    <h4 style="margin-top: -8px;">Total: R$ <span>30,00</span>(BARCA)</h4>
-                    <p style="color: red; font-size: 15px; margin-top: -15px;">OBS: Para a barca de Batata Frita faça a escolha entre Cheddar e Catupiry ou Molho 4 queijos. Adicionais grátis.</p>
+                    <label><input type="checkbox" name="adicional" value="Quatro Queijos + (4,00)"> Quatro Queijos  -------------- R$ 4,00</label><br>
 
                     <!-- Campo para o endereço -->
                     <label for="endereco">Endereço e número de entrega:</label><br>
-                    <input type="text" id="endereco" name="endereco" required placeholder="Insira seu endereço aqui"><br><br>
+                    <input type="text" id="endereco" name="endereco" required placeholder="Insira seu endereço e número aqui"><br><br>
+
+                    <label for="referencia">Ponto de referência:</label><br>
+                    <input type="text" id="referencia" name="referencia" required placeholder="Insira seu ponto de referência aqui"><br><br>
+
                     
                     <button type="button" onclick="submitOrder()">Finalizar Pedido</button>
                 </form>
