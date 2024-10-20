@@ -100,12 +100,6 @@ button:hover {
     position: relative;
 }
 
-/* Diminuir a altura do modal */
-.modal-content {
-    max-height: 400px; /* Define uma altura máxima para o modal */
-    overflow-y: auto; /* Permite rolar o conteúdo do modal se necessário */
-}
-
 .modal-content h2 {
     color: yellow; /* Título em amarelo */
     font-size: 18px; /* Reduz o tamanho da fonte */
@@ -114,12 +108,16 @@ button:hover {
 /* Estilo dos rótulos de adicionais */
 .modal-content label {
     display: flex; /* Alinha os rótulos e os checkboxes na horizontal */
-    justify-content: flex-start; /* Alinha à esquerda para aproximar do checkbox */
-    margin: 5px 0; /* Espaçamento vertical reduzido */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: flex-start; /* Alinha à esquerda */
+    margin: 4px 0; /* Espaçamento vertical reduzido */
     color: white;
-    font-size: 15px; /* Reduz o tamanho da fonte */
-    padding-left: 10px; /* Ajusta o espaçamento à esquerda para manter um leve afastamento */
-    font-weight: bold;
+    font-size: 14px; /* Reduz o tamanho da fonte */
+}
+
+/* Espaçamento para o texto do adicional */
+.modal-content label span {
+    margin-left: 10px; /* Espaçamento à esquerda do texto */
 }
 
 /* Estilo do botão de finalizar pedido */
