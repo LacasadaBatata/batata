@@ -118,7 +118,7 @@ button:hover {
     justify-content: flex-start; /* Alinha à esquerda */
     margin: 5px 0; /* Espaçamento vertical */
     color: white;
-    font-size: 14px; /* Diminuído */
+    font-size: 13px; /* Diminuído */
 }
 /* Espaçamento para o texto do adicional */
 .modal-content label span {
