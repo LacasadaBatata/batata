@@ -56,7 +56,7 @@ header {
 }
 
 button {
-    background-color: yellow;
+    background-color: yellow; /* Botão com fundo amarelo */
     color: black;
     border-radius: 5px;
     border: none;
@@ -65,41 +65,96 @@ button {
     padding: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+button:hover {
+    background-color: #ffc107; /* Cor do botão ao passar o mouse */
+}
+
 /* Estilo do modal */
 .modal {
-    display: none; /* Esconde o modal por padrão */
-    position: fixed; /* Fica fixo na tela */
-    z-index: 1; /* Fica acima de outros elementos */
-    left: 0;
-    top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Adiciona barra de rolagem se necessário */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com opacidade */
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Agora o modal se move com a rolagem da página */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o modal */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Permite rolar o conteúdo se necessário */
 }
 
 /* Conteúdo do modal */
 .modal-content {
-    background-color: #323232;
-    margin: 15% auto; /* Margem automática para centralizar */
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%; /* Largura do modal */
-    max-width: 400px; /* Largura máxima do modal */
+    background-color: #323232; /* Cor de fundo igual aos cards */
+    padding: 15px; /* Reduz o espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 70%; /* Largura ajustada para ser menor */
+    max-width: 350px; /* Largura máxima reduzida */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    color: white;
+    text-align: center;
+    position: relative;
 }
 
-/* Estilo do botão de fechar */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+/* Diminuir a altura do modal */
+.modal-content {
+    max-height: 400px; /* Define uma altura máxima para o modal */
+    overflow-y: auto; /* Permite rolar o conteúdo do modal se necessário */
+}
+
+.modal-content h2 {
+    color: yellow; /* Título em amarelo */
+    font-size: 18px; /* Reduz o tamanho da fonte */
+}
+
+/* Estilo dos rótulos de adicionais */
+.modal-content label {
+    display: flex; /* Alinha os rótulos e os checkboxes na horizontal */
+    justify-content: flex-start; /* Alinha à esquerda para aproximar do checkbox */
+    margin: 5px 0; /* Espaçamento vertical reduzido */
+    color: white;
+    font-size: 15px; /* Reduz o tamanho da fonte */
+    padding-left: 10px; /* Ajusta o espaçamento à esquerda para manter um leve afastamento */
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+/* Estilo do botão de finalizar pedido */
+.modal-content button {
+    background-color: yellow; /* Cor de fundo amarela */
+    color: black; /* Texto preto */
+    padding: 8px 15px; /* Tamanho do botão reduzido */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte reduzido */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    margin-top: 15px; /* Margem superior */
+}
+
+.modal-content button:hover {
+    background-color: #ffc107; /* Cor mais clara ao passar o mouse */
+}
+
+/* Estilo do botão de fechar o modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px; /* Tamanho da fonte reduzido */
+    color: white;
     cursor: pointer;
+}
+
+/* Estilo para inputs de endereço e referência */
+.modal-content input[type="text"] {
+    width: 90%; /* Reduz a largura do campo de texto */
+    padding: 5px; /* Reduz o padding */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px; /* Reduz o tamanho da fonte */
 }
