@@ -47,12 +47,12 @@ header {
 .card h4 {
     color: yellow;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px; /* Diminuído */
     margin: 15px;
 }
 
 .card p {
-    font-size: large;
+    font-size: medium; /* Diminuído */
 }
 
 button {
@@ -61,7 +61,7 @@ button {
     border-radius: 5px;
     border: none;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Diminuído */
     padding: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
@@ -84,7 +84,8 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
     justify-content: center;
     align-items: center;
-    overflow: auto; /* Permite rolar o conteúdo se necessário */
+    overflow: hidden; /* Removendo a rolagem */
+    padding: 0;
 }
 
 /* Conteúdo do modal */
@@ -92,17 +93,22 @@ button:hover {
     background-color: #323232; /* Cor de fundo igual aos cards */
     padding: 15px; /* Reduz o espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
-    width: 70%; /* Largura ajustada para ser menor */
-    max-width: 350px; /* Largura máxima reduzida */
+    width: 70%; /* Largura ajustada */
+    max-width: 400px; /* Largura máxima ajustada */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
     color: white;
     text-align: center;
     position: relative;
+    height: auto; /* Ajusta a altura */
+    max-height: 90%; /* Garante que o modal não ultrapasse 90% da tela */
+    overflow: hidden; /* Remove a rolagem */
 }
 
+/* Estilo do conteúdo */
 .modal-content h2 {
     color: yellow; /* Título em amarelo */
-    font-size: 18px; /* Reduz o tamanho da fonte */
+    font-size: 16px; /* Diminuído */
+    margin-bottom: 20px;
 }
 
 /* Estilo dos rótulos de adicionais */
@@ -110,11 +116,10 @@ button:hover {
     display: flex; /* Alinha os rótulos e os checkboxes na horizontal */
     align-items: center; /* Centraliza verticalmente */
     justify-content: flex-start; /* Alinha à esquerda */
-    margin: 4px 0; /* Espaçamento vertical reduzido */
+    margin: 5px 0; /* Espaçamento vertical */
     color: white;
-    font-size: 14px; /* Reduz o tamanho da fonte */
+    font-size: 14px; /* Diminuído */
 }
-
 /* Espaçamento para o texto do adicional */
 .modal-content label span {
     margin-left: 10px; /* Espaçamento à esquerda do texto */
@@ -124,12 +129,12 @@ button:hover {
 .modal-content button {
     background-color: yellow; /* Cor de fundo amarela */
     color: black; /* Texto preto */
-    padding: 8px 15px; /* Tamanho do botão reduzido */
+    padding: 10px 20px; /* Ajusta o padding */
     border: none; /* Sem borda */
     border-radius: 5px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte reduzido */
+    font-size: 14px; /* Diminuído */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
-    margin-top: 15px; /* Margem superior */
+    margin-top: -15px; /* Margem superior */
 }
 
 .modal-content button:hover {
@@ -141,18 +146,19 @@ button:hover {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 20px; /* Tamanho da fonte reduzido */
+    font-size: 20px; /* Diminuído */
     color: white;
     cursor: pointer;
 }
 
 /* Estilo para inputs de endereço e referência */
 .modal-content input[type="text"] {
-    width: 90%; /* Reduz a largura do campo de texto */
-    padding: 5px; /* Reduz o padding */
-    margin-top: 5px;
-    margin-bottom: 10px;
+    width: 100%; /* Ajusta a largura do campo de texto */
+    padding: 5px; /* Ajusta o padding */
+    margin-top: 2px; /* Ajusta a margem superior */
+    margin-bottom: 5px; /* Ajusta a margem inferior */
     border-radius: 5px;
     border: none;
-    font-size: 14px; /* Reduz o tamanho da fonte */
+    font-size: 14px; /* Diminuído */
+    line-height: 1.4; /* Diminui o espaçamento entre linhas */
 }
