@@ -37,7 +37,6 @@ function updateExtrasPrices(secondCard) {
                     case "Molho 4 Queijos ":
                         label.innerHTML = `${checkbox.outerHTML} Molho 4 Queijos ---------------- R$ 4,00`;
                         break;
-                    
                 }
             }
         }
